@@ -1,7 +1,7 @@
 #Relatório Exercício 1 - Compilação e Otimização
 
 ## 1. Introdução
-Ao longo dos anos, várias ferramentas foram desenvolvidas para tornarem a vida dos desenvolvedores de software mais agradável, entre elas compiladores com muitos truques para otimizar a execução dos códigos e programas que ajudam a localizar e arrumar problemas indesejados, os famosos debuggers, como é o caso do GDB (GNU Debugger). Assim, esse exercício tem o objetivo de nos familiarizer com as ferramentas citadas acima.
+Ao longo dos anos, várias ferramentas foram desenvolvidas para tornarem a vida dos desenvolvedores de software mais agradável, entre elas compiladores com muitos truques para otimizar a execução dos códigos e programas que ajudam a localizar e arrumar problemas indesejados, os famosos depuradores, como é o caso do GDB (GNU Debugger), que pode ser usado simplesmente digitando o comando ```gdb``` no terminal de sua preferência, podendo incluir breakpoints, imprimir as variáveis e ter total controle do estado do software. Como comentado acima depurar é o processo de procurar e corrigir erros dentro do código. Assim, esse exercício tem o objetivo de nos familiarizer com as ferramentas citadas acima.
 
 ##2. Resumo
 Ao longo desse experimento, foi necessário revisitar algumas tecnicas de compilação, otimização e debug, muito úteis durante o processo de desenvolvimento. Ao relembrar essas tecnicas, usei alguns parâmetros no compilador da seguinte maneira:
