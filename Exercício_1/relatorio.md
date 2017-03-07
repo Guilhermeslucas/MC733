@@ -16,3 +16,7 @@ Para automatizar a tarefa de compilar e buildar o programa, também lancei mão 
 * É possível criar facilmente dependências de arquivos necessários no processo de compilação e diversas regras chamadas por argumento de linha de comando no Makefile, o que levaria algumas linhas de codigo a mais para o programador.
 
 Para poder analisar de maneira completa o desempenho do programa, também usamos o gprof para ter algumas informações como, por exemplo, qual parte do código está consumindo mais tempo. Essa é, assim como o gdb, uma ferramenta muito simples de ser usada. Essa pode ser usada digitando ```gprof``` adicionando ```-pg``` ao compilar. Ao usar ferramentas como essas nos questionamos sobre qual a melhor maneira de escrever um programa que tire proveito do gigantesco multiprocesamento de clusters e afins. Assim, podemos usar os avanços dos compiladores, bibliotecas de processamento distribuído e algumas vezes GPU's e hardwares do gênero, com auxílio de programação paralela.
+
+##3. Experimentos
+Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso.
+####3.1 Programa original sem nenhuma flag de compilação
