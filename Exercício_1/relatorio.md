@@ -1,7 +1,7 @@
 #Relatório Exercício 1 - Compilação e Otimização
 
 ## 1. Introdução
-Ao longo dos anos, várias ferramentas foram desenvolvidas para tornarem a vida dos desenvolvedores de software mais agradável, entre elas compiladores com muitos truques para otimizar a execução dos códigos e programas que ajudam a localizar e arrumar problemas indesejados, os famosos depuradores, como é o caso do GDB (GNU Debugger), que pode ser usado simplesmente digitando o comando ```gdb``` no terminal de sua preferência, podendo incluir breakpoints, imprimir as variáveis e ter total controle do estado do software. Como comentado acima depurar é o processo de procurar e corrigir erros dentro do código. Assim, esse exercício tem o objetivo de nos familiarizer com as ferramentas citadas acima.
+Ao longo dos anos, várias ferramentas foram desenvolvidas para tornarem a vida dos desenvolvedores de software mais agradável, entre elas compiladores com muitos truques para otimizar a execução dos códigos e programas que ajudam a localizar e arrumar problemas indesejados, os famosos depuradores, como é o caso do GDB (GNU Debugger), que pode ser usado simplesmente digitando o comando ```gdb``` no terminal de sua preferência, após compilar com a flag ```-g```, podendo incluir breakpoints, imprimir as variáveis e ter total controle do estado do software. Como comentado acima depurar é o processo de procurar e corrigir erros dentro do código. Assim, esse exercício tem o objetivo de nos familiarizer com as ferramentas citadas acima.
 
 ##2. Resumo
 Ao longo desse experimento, foi necessário revisitar algumas tecnicas de compilação, otimização e debug, muito úteis durante o processo de desenvolvimento. Ao relembrar essas tecnicas, usei alguns parâmetros no compilador da seguinte maneira:
@@ -14,3 +14,5 @@ Para automatizar a tarefa de compilar e buildar o programa, também lancei mão 
  
 * O Makefile toma conta de alterar somente as builds que tiveram os arquivos que as geram modificadas, sendo minimalista e muito mais eficiente, já que não faz sentido compilar novamente algo que não mudou. Isso não acontece com scripts, que, por padrão irá compilar tudo novamente, a menos que o programador tenha algum trabalho para tratar esse problema.
 * É possível criar facilmente dependências de arquivos necessários no processo de compilação e diversas regras chamadas por argumento de linha de comando no Makefile, o que levaria algumas linhas de codigo a mais para o programador.
+
+Para poder analisar de maneira completa o desempenho do programa, também usamos o gprof para ter algumas informações como, por exemplo, qual parte do código está consumindo mais tempo. Essa é, assim como o gdb, uma ferramenta muito simples de ser usada. 
