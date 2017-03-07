@@ -51,7 +51,7 @@ Esse resultado se assemelha bastante com o que obtemos com ```-O0```, mas ainda 
 |:----:|:-------:|:------:|
 |0.330s|0.330s|0.0000s|
 
-Como podemos observar, o resultado entre a compilação via linha de comando com um arquivo só e usando um script, com dois arquivos possui tempos muito próximos, não parecendo ser de grande influência as ações citadas.
+Como podemos observar, o resultado entre a compilação via linha de comando com um arquivo só e usando o script de compilação ```compile_script.sh```, com dois arquivos possui tempos muito próximos, não parecendo ser de grande influência as ações citadas.
 
 ###3.5 Codigo separado em dois arquivos, com flag -O1 e Makefile
 | Real | Usuário | Sistema|
@@ -59,4 +59,13 @@ Como podemos observar, o resultado entre a compilação via linha de comando com
 |0.333s|0.333s|0.0000s|
 
 O resultado ainda se mantém muito próximo a compilação com script com arquivos separados e pela linha de comando com um arquivo só. Essa era realmente o resultado esperado, já que essas ações não influenciam mudanças no código de máquina final, que é trancrito durante o período de compilação.
+
+###3.6 Código N_Primos em um único arquivo com flag -O1
+Esse experimento cobre o caso do código que busca quantos números primos existem entre 1 e o número dado via linha de comando. Testando com o número 500000 (usado nos testes anteriores) e com flag de compilação 
+```-O1``` obtive o seguinte tempo:
+
+| Real | Usuário | Sistema|
+|:----:|:-------:|:------:|
+|35.284s|35.246s|0.036s|
+
 
