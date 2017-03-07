@@ -37,4 +37,10 @@ Além disso, usamos o comando ```time``` para obter as informações sobre tempo
 Após obter e analisar os tempos, notamos que a flag que gerou o melhor desempenho foi a ```-O1```. Somos induzidos a pensar que, quanto maior o número, maior será o desempenho, mas esse é um bom exemplo que não é bem assim. O que acontece é que cada número diz respeito a um tipo de otimização, que pode ser melhor ou pior para o tipo de problema que você está tratando.
 
 ###3.3 Código original com flags -mtune
- 
+Usando a flag ```-mtune=native```, que seleciona a sua arquitetura e aplica as melhores otimizações para ela especificamente, obtive os seguintes resultados:
+
+| Real | Usuário | Sistema|
+|:----:|:-------:|:------:|
+|0.0355s|0.0355s|0.0000s|
+
+Esse resultado se assemelha bastante com o que obtemos com ```-O0```, mas ainda está longe do melhor resultado que obtemos com a flag ```-O1```.
