@@ -4,11 +4,8 @@
 Ao longo dos anos, várias ferramentas foram desenvolvidas para tornarem a vida dos desenvolvedores de software mais agradável, entre elas compiladores com muitos truques para otimizar a execução dos códigos e programas que ajudam a localizar e arrumar problemas indesejados, os famosos depuradores, como é o caso do GDB (GNU Debugger), que pode ser usado simplesmente digitando o comando ```gdb``` no terminal de sua preferência, após compilar com a flag ```-g```, podendo incluir breakpoints, imprimir as variáveis e ter total controle do estado do software. Como comentado acima depurar é o processo de procurar e corrigir erros dentro do código. Assim, esse exercício tem o objetivo de nos familiarizer com as ferramentas citadas acima.
 
 ##2. Resumo
-Ao longo desse experimento, foi necessário revisitar algumas tecnicas de compilação, otimização e debug, muito úteis durante o processo de desenvolvimento. Ao relembrar essas tecnicas, usei alguns parâmetros no compilador da seguinte maneira:
-```
-gcc -parametro1 --parametro2 code.c -o code.out
-```
--------------------------- Decidir quais são importantes pro meu processador -------------
+Ao longo desse experimento, foi necessário revisitar algumas tecnicas de compilação, otimização e debug, muito úteis durante o processo de desenvolvimento.
+
 
 Para automatizar a tarefa de compilar e buildar o programa, também lancei mão do GNU Make, que é um software que recebe algumas regras por meio de um Makefile. Ao usá-lá, me questionei sobre o porque não usar um Script em Shell ou até mesmo Python para esse processo, e cheguei a conclusão de que é muito melhor usar o Make pelos seguintes argumentos:
  
@@ -17,6 +14,27 @@ Para automatizar a tarefa de compilar e buildar o programa, também lancei mão 
 
 Para poder analisar de maneira completa o desempenho do programa, também usamos o gprof para ter algumas informações como, por exemplo, qual parte do código está consumindo mais tempo. Essa é, assim como o gdb, uma ferramenta muito simples de ser usada. Essa pode ser usada digitando ```gprof``` adicionando ```-pg``` ao compilar. Ao usar ferramentas como essas nos questionamos sobre qual a melhor maneira de escrever um programa que tire proveito do gigantesco multiprocesamento de clusters e afins. Assim, podemos usar os avanços dos compiladores, bibliotecas de processamento distribuído e algumas vezes GPU's e hardwares do gênero, com auxílio de programação paralela.
 
-##3. Experimentos
-Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso.
-####3.1 Programa original sem nenhuma flag de compilação
+##3. Experimentos e Análise
+Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso. Nas representações abaixo, o tempo que realmente foi  decorrido para o a finalização do processo está na coluna Real. Para passar os parâmetros desejados para o compilador basta passar as flags desejadas da seguinte maneira:
+```
+gcc -parametro1 -parametro2 primo.c -o primo
+```
+Além disso, usamos o comando ```time``` para obter as informações sobre tempo de execução. Para usá-lo, basta escrever, antes do seu comando desejado, a palavra ```time```.
+
+###3.1 Código original sem nenhuma flag de compilação
+| Real | Usuário | Sistema|
+|:----:|:-------:|:------:|
+|0.0358s|0.0358s|0.0000s|
+
+###3.2 Código original com flags -OX
+|Flag|Real|Usuário|Sistema|
+|:--:|:--:|:-----:|:-----:|
+|-O0|0.355s|0.355s|0.000s|
+|-O1|0.335s|0.335s|0.000s|
+|-O2|0.365s|0.365s|0.000s|
+|-O3|0.372s|0.372s|0.000s|
+
+Após obter e analisar os tempos, notamos que a flag que gerou o melhor desempenho foi a ```-O1```. Somos induzidos a pensar que, quanto maior o número, maior será o desempenho, mas esse é um bom exemplo que não é bem assim. O que acontece é que cada número diz respeito a um tipo de otimização, que pode ser melhor ou pior para o tipo de problema que você está tratando.
+
+###3.3 Código original com flags -mtune
+ 
