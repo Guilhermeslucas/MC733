@@ -1,5 +1,8 @@
-all: main.c calc_primo.c
-	gcc -O1 main.c calc_primo.c -o primo
+primo: main.c calc_primo.c
+	gcc -O1 main.c calc_primo.c -o primo.out
 
-clean: primo
-	rm -rf primo
+n_primo: n_primos_main.c calc_primo.c
+	gcc -O1 n_primos_main.c calc_primo.c -o n_primo.out
+
+clean: 
+	rm -rf *.out

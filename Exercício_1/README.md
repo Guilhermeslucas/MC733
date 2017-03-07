@@ -66,6 +66,16 @@ Esse experimento cobre o caso do código que busca quantos números primos exist
 
 | Real | Usuário | Sistema|
 |:----:|:-------:|:------:|
-|35.284s|35.246s|0.036s|
+|31.246s|31.258s|0.004s|
+
+###3.7 Código N_Primos dois arquivos e flag -O1
+Testes feitos com os arquivos ```n_primos_main.c``` e ```calc_primo.c```.
+
+| Real | Usuário | Sistema|
+|:----:|:-------:|:------:|
+|31.718s|31.733s|0.000s|
+
+Como podemos notar, o código para achar quantos números primos existem em um determinado intervalo tem também performances extremamente próximas, como era esperado. Isso acontece porque o compilador linka todas as bibliotecas durante a compilação, para transcrever o codigo de máquina. Tal processo, claramente, não é afetado por separar o código em arquivos.
+
 
 
