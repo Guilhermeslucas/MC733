@@ -60,4 +60,3 @@ Como podemos observar, o resultado entre a compilação via linha de comando com
 
 O resultado ainda se mantém muito próximo a compilação com script com arquivos separados e pela linha de comando com um arquivo só. Essa era realmente o resultado esperado, já que essas ações não influenciam mudanças no código de máquina final, que é trancrito durante o período de compilação.
 
-
