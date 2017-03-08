@@ -91,5 +91,5 @@ Para que eu pudesse ter uma boa noção onde eu deveria otimizar o código, usei
 gprof executavel > stats.txt
 ```
 onde ```executável``` é o compilado do código e ```stats.txt``` é o arquivo com dados sobre seu programa, como onde ele gasta mais tempo.      
-Após analisar o arquivo ```run.txt``` notei que a função para identificar se o número é primo é que estava gastando mais tempo, assim tentei paralelizar seu loop principalcom o auxílio da biblioteca **OpenMP**
+Após analisar o arquivo ```run.txt``` notei que a função para identificar se o número é primo é que estava gastando mais tempo, assim tentei paralelizar seu loop principalcom o auxílio da biblioteca **OpenMP**. Essa pode ser facilmente usada para paralelizar loops escrevendo a linha ```#pragma omp parallel for``` logo acima do loop que deseja paralelizar e compilar usando a flag ```-fopenmp```.
 
