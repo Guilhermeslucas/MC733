@@ -84,3 +84,11 @@ Como podemos notar, o código para achar quantos números primos existem em um d
 
 Ao analisar esses números, achei que estavam errados a princípio, já que os tempos estavam muito próximos. Porém, depois de refletir um pouco sobre o problema, pensei que faz sentido isso acontecer, uma vez que os números pares eram dados como não primos logo na primeira comparação do loop da função que define se o número é primo ou não, processo extremamente rápido. Sendo assim, esses números não causam uma diferença muito grande na soma final dos tempos.
 
+###3.9 Colentando algumas estatísticas com GProf
+Para que eu pudesse ter uma boa noção onde eu deveria otimizar o código, usei o GProf. Gprof é um software de profiling, ou seja, da alguns dados e estatísticas sobre seu programa. Utilizá-lo é extremamente simples, uma vez que basta compilar o código com a flag ```-pg```, rodar o executável normalmente e executar o seguinte comando:
+
+```
+gprof executavel > stats.txt
+```
+onde ```executável``` é o compilado do código e ```stats.txt``` é o arquivo com dados sobre seu programa, como onde ele gasta mais tempo.
+
