@@ -16,7 +16,7 @@ Para automatizar a tarefa de compilar e buildar o programa, também lancei mão 
 Para poder analisar de maneira completa o desempenho do programa, também usamos o gprof para ter algumas informações como, por exemplo, qual parte do código está consumindo mais tempo. Essa é, assim como o gdb, uma ferramenta muito simples de ser usada. Essa pode ser usada digitando ```gprof``` adicionando ```-pg``` ao compilar. Ao usar ferramentas como essas nos questionamos sobre qual a melhor maneira de escrever um programa que tire proveito do gigantesco multiprocesamento de clusters e afins. Assim, podemos usar os avanços dos compiladores, bibliotecas de processamento distribuído e algumas vezes GPU's e hardwares do gênero, com auxílio de programação paralela.
 
 ##3. Experimentos e Análise
-Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso. Nas representações abaixo, o tempo que realmente foi  decorrido para o a finalização do processo está na coluna **Real**. Para passar os parâmetros citados em cada item para o compilador basta passar as flags desejadas da seguinte maneira:
+Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso. Nas representações abaixo, o tempo que realmente foi  decorrido para o a finalização do processo está na coluna **Real**. Além disse, a coluna **User** diz respeito ao tempo que o programa gastou de CPU no modo de usuário padrão. Diferente de **Sys**, que é o tempo que o programa gastou no kernel, ou seja, em chamadas de sistema. O Para passar os parâmetros citados em cada item para o compilador basta passar as flags desejadas da seguinte maneira:
 ```
 gcc -parametro1 -parametro2 primo.c -o primo
 ```
@@ -91,5 +91,5 @@ Para que eu pudesse ter uma boa noção onde eu deveria otimizar o código, usei
 gprof executavel > stats.txt
 ```
 onde ```executável``` é o compilado do código e ```stats.txt``` é o arquivo com dados sobre seu programa, como onde ele gasta mais tempo.      
-Após analisar o arquivo ```run.txt``` notei que a função para identificar se o número é primo é que estava gastando mais tempo, assim tentei paralelizar seu loop principalcom o auxílio da biblioteca **OpenMP**. Essa pode ser facilmente usada para paralelizar loops escrevendo a linha ```#pragma omp parallel for``` logo acima do loop que deseja paralelizar e compilar usando a flag ```-fopenmp```.
+Após analisar o arquivo ```run.txt``` notei que a função para identificar se o número é primo é que estava gastando mais tempo, assim tentei paralelizar seu loop principalcom o auxílio da biblioteca **OpenMP**. Essa pode ser facilmente usada para paralelizar loops escrevendo a linha ```#pragma omp parallel for``` logo acima do loop que deseja paralelizar e compilar usando a flag ```-fopenmp```. Porém, encontrei alguns problemas.
 
