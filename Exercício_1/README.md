@@ -77,5 +77,10 @@ Testes feitos com os arquivos ```n_primos_main.c``` e ```calc_primo.c```.
 
 Como podemos notar, o código para achar quantos números primos existem em um determinado intervalo tem também performances extremamente próximas, como era esperado. Isso acontece porque o compilador linka todas as bibliotecas durante a compilação, para transcrever o codigo de máquina. Tal processo, claramente, não é afetado por separar o código em arquivos.
 
+###3.8 Código N_Primos em dois arquivos, -O1 e somente percorrendo os ímpares
+| Real | Usuário | Sistema|
+|:----:|:-------:|:------:|
+|31.814s|31.814s|0.000s|
 
+Ao analisar esses números, achei que estavam errados a princípio, já que os tempos estavam muito próximos. Porém, depois de refletir um pouco sobre o problema, pensei que faz sentido isso acontecer, uma vez que os números pares eram dados como não primos logo na primeira comparação do loop da função que define se o número é primo ou não, processo extremamente rápido. Sendo assim, esses números não causam uma diferença muito grande na soma final dos tempos.
 
