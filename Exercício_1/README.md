@@ -16,7 +16,7 @@ Para automatizar a tarefa de compilar e buildar o programa, também lancei mão 
 Para poder analisar de maneira completa o desempenho do programa, também usamos o gprof para ter algumas informações como, por exemplo, qual parte do código está consumindo mais tempo. Essa é, assim como o gdb, uma ferramenta muito simples de ser usada. Essa pode ser usada digitando ```gprof``` adicionando ```-pg``` ao compilar. Ao usar ferramentas como essas nos questionamos sobre qual a melhor maneira de escrever um programa que tire proveito do gigantesco multiprocesamento de clusters e afins. Assim, podemos usar os avanços dos compiladores, bibliotecas de processamento distribuído e algumas vezes GPU's e hardwares do gênero, com auxílio de programação paralela.
 
 ##3. Experimentos e Análise
-Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso. Nas representações abaixo, o tempo que realmente foi  decorrido para o a finalização do processo está na coluna **Real**. Além disse, a coluna **User** diz respeito ao tempo que o programa gastou de CPU no modo de usuário padrão. Diferente de **Sys**, que é o tempo que o programa gastou no kernel, ou seja, em chamadas de sistema. O Para passar os parâmetros citados em cada item para o compilador basta passar as flags desejadas da seguinte maneira:
+Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso. Nas representações abaixo, o tempo que realmente foi  decorrido para o a finalização do processo está na coluna **Real**. Além disse, a coluna **Usuário** diz respeito ao tempo que o programa gastou de CPU no modo de usuário padrão. Diferente de **Sistema**, que é o tempo que o programa gastou no kernel, ou seja, em chamadas de sistema. O Para passar os parâmetros citados em cada item para o compilador basta passar as flags desejadas da seguinte maneira:
 ```
 gcc -parametro1 -parametro2 primo.c -o primo
 ```
@@ -26,6 +26,8 @@ Além disso, usamos o comando ```time``` para obter as informações sobre tempo
 | Real | Usuário | Sistema|
 |:----:|:-------:|:------:|
 |0.358s|0.358s|0.000s|
+
+Esse teste e os outros com o código original foram feitos usando o arquivo ```primo.c```.
 
 ###3.2 Código original com flags -OX
 |Flag|Real|Usuário|Sistema|
@@ -51,7 +53,7 @@ Esse resultado se assemelha bastante com o que obtemos com ```-O0```, mas ainda 
 |:----:|:-------:|:------:|
 |0.330s|0.330s|0.0000s|
 
-Como podemos observar, o resultado entre a compilação via linha de comando com um arquivo só e usando o script de compilação ```compile_script.sh```, com dois arquivos possui tempos muito próximos, não parecendo ser de grande influência as ações citadas.
+Como podemos observar, o resultado entre a compilação via linha de comando com um arquivo só e usando o script de compilação ```compile_script.sh```, com dois arquivos possui tempos muito próximos, não parecendo ser de grande influência as ações citadas. Esse teste o e **3.5** foram feitos com os arquivos ```main.c``` e ```calc_primo.c```.
 
 ###3.5 Codigo separado em dois arquivos, com flag -O1 e Makefile
 | Real | Usuário | Sistema|
@@ -77,19 +79,27 @@ Testes feitos com os arquivos ```n_primos_main.c``` e ```calc_primo.c```.
 
 Como podemos notar, o código para achar quantos números primos existem em um determinado intervalo tem também performances extremamente próximas, como era esperado. Isso acontece porque o compilador linka todas as bibliotecas durante a compilação, para transcrever o codigo de máquina. Tal processo, claramente, não é afetado por separar o código em arquivos.
 
-###3.8 Código N_Primos em dois arquivos, -O1 e somente percorrendo os ímpares
+###3.8 Código N_Primos em dois arquivos e somente percorrendo os ímpares
 | Real | Usuário | Sistema|
 |:----:|:-------:|:------:|
 |31.814s|31.814s|0.000s|
 
 Ao analisar esses números, achei que estavam errados a princípio, já que os tempos estavam muito próximos. Porém, depois de refletir um pouco sobre o problema, pensei que faz sentido isso acontecer, uma vez que os números pares eram dados como não primos logo na primeira comparação do loop da função que define se o número é primo ou não, processo extremamente rápido. Sendo assim, esses números não causam uma diferença muito grande na soma final dos tempos.
 
-###3.9 Colentando algumas estatísticas com GProf
+###3.9 Colentando algumas estatísticas com GProf e Paraleizando código
 Para que eu pudesse ter uma boa noção onde eu deveria otimizar o código, usei o **GProf**. **Gprof** é um software de profiling, ou seja, da alguns dados e estatísticas sobre seu programa. Utilizá-lo é extremamente simples, uma vez que basta compilar o código com a flag ```-pg```, rodar o executável normalmente e executar o seguinte comando:
 
 ```
 gprof executavel > stats.txt
 ```
 onde ```executável``` é o compilado do código e ```stats.txt``` é o arquivo com dados sobre seu programa, como onde ele gasta mais tempo.      
-Após analisar o arquivo ```run.txt``` notei que a função para identificar se o número é primo é que estava gastando mais tempo, assim tentei paralelizar seu loop principalcom o auxílio da biblioteca **OpenMP**. Essa pode ser facilmente usada para paralelizar loops escrevendo a linha ```#pragma omp parallel for``` logo acima do loop que deseja paralelizar e compilar usando a flag ```-fopenmp```. Porém, encontrei alguns problemas. A função ```primo``` que o professor nos deu, tem valores de retorno no meio do loop, o que nos impede de usar o **OpenMP** nesse trecho sem modificá-lo. A modificação que tentei usar foi usar uma **flag** que quebraria o loop ao notar que o número não é primo. Além disso, essa **flag** seria usada para defifinir se o número era primo ou não, ao terminar o loop. Porém, isso acaba piorando o desempenho do programa, uma vez que todos os números entre **2** e **N** são testados, diferente do que acontecia anteriormente, onde o loop era quebrado assim que era descoberto que o número não era primo.
+Após analisar o arquivo ```run.txt``` notei que a função para identificar se o número é primo é que estava gastando mais tempo, assim tentei paralelizar seu loop principalcom o auxílio da biblioteca **OpenMP**. Essa pode ser facilmente usada para paralelizar loops escrevendo a linha ```#pragma omp parallel for``` logo acima do loop que deseja paralelizar e compilar usando a flag ```-fopenmp```. Porém, encontrei alguns problemas. A função ```primo``` que o professor nos deu, tem valores de retorno no meio do loop, o que nos impede de usar o **OpenMP** nesse trecho sem modificá-lo. A modificação que tentei usar foi usar uma **flag** que quebraria o loop ao notar que o número não é primo. Além disso, essa **flag** seria usada para defifinir se o número era primo ou não, ao terminar o loop. Porém, isso acaba piorando o desempenho do programa, uma vez que todos os números entre **2** e **N** são testados, diferente do que acontecia anteriormente, onde o loop era quebrado assim que era descoberto que o número não era primo. Assim, paralelizei o loop da função `main`, dentro da função ```n_primo_main_paralela.c```, obtendo os seguintes resultados:
+
+| Real | Usuário | Sistema|
+|:----:|:-------:|:------:|
+|19.943s|49.247s|0.028s|
+
+Como podemos notar, essa foi a versão mais rápido de todas até agora, devido a paralelização. É interessante notar que o tempo de **Usuário** é maior que o **Real**, o que parece estranho. Na verdade, isso acontece pois o tempo de **Usuário** está somando o tempo de cada Thread.
+
+ 
 
