@@ -5,9 +5,20 @@ int primo(int n);
 
 int main(int argc, char *argv[] ) {
     int i;
-    int counter = 0;
+    int counter = 1;
+    int n = atoi(argv[1]);
+    
+    if (n == 1) {
+        printf("Existem 0 números primos no intervalo dado\n");
+        exit(1);
+    }
+    
+    if (n == 2) {
+        printf("Existe 1 número primo no intervalo dado\n");
+        exit(1);
+    }
 
-    for (i = 2; i <= atoi(argv[1]); i++) {
+    for (i = 3; i <= n; i = i + 2) {
         if (primo(i))
             counter++;
     }
