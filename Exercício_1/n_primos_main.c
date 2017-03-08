@@ -17,7 +17,6 @@ int main(int argc, char *argv[] ) {
         printf("Existe 1 número primo no intervalo dado\n");
         exit(1);
     }
-
     for (i = 3; i <= n; i = i + 2) {
         if (primo(i))
             counter++;
