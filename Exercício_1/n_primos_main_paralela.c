@@ -18,7 +18,7 @@ int main(int argc, char *argv[] ) {
         exit(1);
     }
     
-    #pragma omp parallel for
+    #pragma omp parallel for reduction(+:counter)
     for (i = 3; i <= n; i = i + 2) {
         if (primo(i))
             counter++;
