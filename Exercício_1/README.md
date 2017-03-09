@@ -105,3 +105,11 @@ Como podemos notar, essa foi a versão mais rápido de todas até agora, devido 
 Após realizar todos os testes pedidos pelo professor, notamos que é possível melhorar vertiginosamente o desempenho de um programa com o auxílio do compilador e com mudanças no código, como usar bibliotecas que paralelizam código e achar maneiras de melhorar o algotitimo. Além disso, notamos que para consegui tirar o maior proveito possível de arquiteturas de multiprocessamento devemos tomar cuidado com threads que compartilham regiões na memória, pois isso pode causar assincronia de valores, implicando em resultados errados. Existem algumas bibliotecas de processamento paralelo que auxiliam muito nesses problemas como é o caso do **CUDA**, para **GPU's** e **OpenCL**, para **arquiteturas heterogêneas**. Outra técnica que se mostra muito eficiente, é usar estrututuras de dados em **Matriz** ou **Vetores**, que são muito fáceis de serem paralelizados.
 
 ##5. Programa para a competição
+Após procurar em muitas fontes sobre bons jeitos de otimizar o código para a competição, cheguei a algumas conclusões. Por isso no meu código final para a competição ```competicao.c```, optei por paralelizar com **OpenMP** e as flags que se mostraram melhor para o meu processador foram as seguintes, usadas na regra ```competicao``` do **Makefile**:
+
+```
+-fopenmp -funroll-loops -mcmodel=medium -ftree-vectorize -Wl,q -mtune=native -Ofast -fpeel-loops -flto -lm
+```
+
+Além disso, fiz algumas modificações na função dos primos que agora só usa divisores primos para ver se um candidato é primo ou não. Assim que essa função encontra um novo primo, ela adiciona no vetor de primos esse novo candidato, parando ao encontrar o n-ésimo. Outra modificação que fiz foi procurar por divisores até a raiz quadrada do candidato, já que acima disso não é possível encontrar um divisor válido, o que ajudou muito no desempenho do programa.
+ 
