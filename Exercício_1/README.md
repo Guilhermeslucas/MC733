@@ -13,14 +13,14 @@ Para automatizar a tarefa de compilar e buildar o programa, também lancei mão 
 * O **Makefile** toma conta de alterar somente as builds que tiveram os arquivos que as geram modificadas, sendo minimalista e muito mais eficiente, já que não faz sentido compilar novamente algo que não mudou. Isso não acontece com scripts, que, por padrão irá compilar tudo novamente, a menos que o programador tenha algum trabalho para tratar esse problema.
 * É possível criar facilmente dependências de arquivos necessários no processo de compilação e diversas regras chamadas por argumento de linha de comando no **Makefile**, o que levaria algumas linhas de codigo a mais para o programador.
 
-Para poder analisar de maneira completa o desempenho do programa, também usamos o gprof para ter algumas informações como, por exemplo, qual parte do código está consumindo mais tempo. Essa é, assim como o gdb, uma ferramenta muito simples de ser usada. Essa pode ser usada digitando ```gprof``` adicionando ```-pg``` ao compilar. Ao usar ferramentas como essas nos questionamos sobre qual a melhor maneira de escrever um programa que tire proveito do gigantesco multiprocesamento de clusters e afins. Assim, podemos usar os avanços dos compiladores, bibliotecas de processamento distribuído e algumas vezes GPU's e hardwares do gênero, com auxílio de programação paralela.
+Para poder analisar de maneira completa o desempenho do programa, também usamos o **gprof** para ter algumas informações como, por exemplo, qual parte do código está consumindo mais tempo. Essa é, assim como o **gdb**, uma ferramenta muito simples de ser usada. Essa pode ser usada digitando ```gprof``` adicionando ```-pg``` ao compilar. Ao usar ferramentas como essas nos questionamos sobre qual a melhor maneira de escrever um programa que tire proveito do gigantesco multiprocesamento de clusters e afins. Assim, podemos usar os avanços dos compiladores, bibliotecas de processamento distribuído e algumas vezes GPU's e hardwares do gênero, com auxílio de programação paralela.
 
 ##3. Experimentos e Análise
-Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso. Nas representações abaixo, o tempo que realmente foi  decorrido para o a finalização do processo está na coluna **Real**. Além disse, a coluna **Usuário** diz respeito ao tempo que o programa gastou de CPU no modo de usuário padrão. Diferente de **Sistema**, que é o tempo que o programa gastou no kernel, ou seja, em chamadas de sistema. O Para passar os parâmetros citados em cada item para o compilador basta passar as flags desejadas da seguinte maneira:
+Nessa parte do relatório, vamos descrever como realizamos os experimentos e quais resultados obtivemos em cada caso. Nas representações abaixo, o tempo que realmente foi  decorrido para o a finalização do processo está na coluna **Real**. Além disso, a coluna **Usuário** diz respeito ao tempo que o programa gastou de CPU no modo de usuário padrão. Diferente de **Sistema**, que é o tempo que o programa gastou no kernel, ou seja, em chamadas de sistema. Para passar os parâmetros citados em cada item para o compilador basta passar as flags desejadas da seguinte maneira:
 ```
 gcc -parametro1 -parametro2 primo.c -o primo
 ```
-Além disso, usamos o comando ```time``` para obter as informações sobre tempo de execução. Para usá-lo, basta escrever, antes do seu comando desejado, a palavra ```time```.
+Também usamos o comando ```time``` para obter as informações sobre tempo de execução. Para usá-lo, basta escrever, antes do seu comando desejado, a palavra ```time```.
 
 ###3.1 Código original sem nenhuma flag de compilação
 | Real | Usuário | Sistema|
@@ -37,7 +37,7 @@ Esse teste e os outros com o código original foram feitos usando o arquivo ```p
 |-O2|0.365s|0.365s|0.000s|
 |-O3|0.372s|0.372s|0.000s|
 
-Após obter e analisar os tempos, notamos que a flag que gerou o melhor desempenho foi a ```-O1```. Somos induzidos a pensar que, quanto maior o número, maior será o desempenho, mas esse é um bom exemplo que não é bem assim. O que acontece é que cada número diz respeito a um tipo de otimização, que pode ser melhor ou pior para o tipo de problema que você está tratando.
+Após obter e analisar os tempos, notamos que a flag que gerou o melhor desempenho foi a ```-O1```. Somos induzidos a pensar que, quanto maior o número, melhor será o desempenho, mas esse é um bom exemplo que não é bem assim. O que acontece é que cada número diz respeito a um tipo de otimização, que pode ser melhor ou pior para o tipo de problema que você está tratando.
 
 ###3.3 Código original com flags -mtune
 Usando a flag ```-mtune=native```, que seleciona a sua arquitetura e aplica as melhores otimizações para ela especificamente, obtive os seguintes resultados:
@@ -48,14 +48,14 @@ Usando a flag ```-mtune=native```, que seleciona a sua arquitetura e aplica as m
 
 Esse resultado se assemelha bastante com o que obtemos com ```-O0```, mas ainda está longe do melhor resultado que obtemos com a flag ```-O1```.
 
-###3.4 Codigo separado em dois arquivos, com flag -O1 e script de compilação
+###3.4 Código separado em dois arquivos, com flag -O1 e script de compilação
 | Real | Usuário | Sistema|
 |:----:|:-------:|:------:|
 |0.330s|0.330s|0.0000s|
 
 Como podemos observar, o resultado entre a compilação via linha de comando com um arquivo só e usando o script de compilação ```compile_script.sh```, com dois arquivos possui tempos muito próximos, não parecendo ser de grande influência as ações citadas. Esse teste o e **3.5** foram feitos com os arquivos ```main.c``` e ```calc_primo.c```.
 
-###3.5 Codigo separado em dois arquivos, com flag -O1 e Makefile
+###3.5 Código separado em dois arquivos, com flag -O1 e Makefile
 | Real | Usuário | Sistema|
 |:----:|:-------:|:------:|
 |0.333s|0.333s|0.0000s|
@@ -84,7 +84,7 @@ Como podemos notar, o código para achar quantos números primos existem em um d
 |:----:|:-------:|:------:|
 |31.814s|31.814s|0.000s|
 
-Ao analisar esses números, achei que estavam errados a princípio, já que os tempos estavam muito próximos. Porém, depois de refletir um pouco sobre o problema, pensei que faz sentido isso acontecer, uma vez que os números pares eram dados como não primos logo na primeira comparação do loop da função que define se o número é primo ou não, processo extremamente rápido. Sendo assim, esses números não causam uma diferença muito grande na soma final dos tempos. Também foram usados os arquivos ```n_primos_main.c``` e calc_primo.c```, sem flags de compilação.
+Ao analisar esses números, achei que estavam errados a princípio, já que os tempos estavam muito próximos. Porém, depois de refletir um pouco sobre o problema, pensei que faz sentido isso acontecer, uma vez que os números pares eram dados como não primos logo na primeira comparação do loop da função que define se o número é primo ou não, processo extremamente rápido. Sendo assim, esses números não causam uma diferença muito grande na soma final dos tempos. Também foram usados os arquivos ```n_primos_main.c``` e ```calc_primo.c```, sem flags de compilação.
 
 ###3.9 Colentando algumas estatísticas com GProf e Paraleizando código
 Para que eu pudesse ter uma boa noção onde eu deveria otimizar o código, usei o **GProf**. **Gprof** é um software de profiling, ou seja, da alguns dados e estatísticas sobre seu programa. Utilizá-lo é extremamente simples, uma vez que basta compilar o código com a flag ```-pg```, rodar o executável normalmente e executar o seguinte comando:
