@@ -12,7 +12,8 @@ unsigned int n_primo(unsigned int n, unsigned int* primos) {
     
     while (ultimo < n) {
         flag = 0;
-        for(i = 0; i < ultimo && !flag && i <= sqrt(n); i++) {
+        #pragma omp paralell for   
+        for(i = 0; i < ultimo && !flag && i < sqrt(n); i++) {
             if (candidato % primos[i] == 0) {
                 flag = 1;
                 break;
