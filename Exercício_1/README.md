@@ -111,5 +111,14 @@ Após procurar em muitas fontes sobre bons jeitos de otimizar o código para a c
 -fopenmp -funroll-loops -mcmodel=medium -ftree-vectorize -Wl,q -mtune=native -Ofast -fpeel-loops -flto -lm
 ```
 
+As flags que estou usando tem as seguintes funções:
+
+* **fopenmp:** flag usada para conseguirmos usar o OpenMP dentro do código, biblioteca esta que paraleliza o loop.
+* **funroll-loops:** "desenrola" loops que podem ter seus índices determinados em tempo de compilação.
+* **ftree-vectorize:** vetoriza o código automaticamente.
+* **Ofast:** Otimização de codigo da familia **OX**.
+* **mtune=native:** faz as melhores compilações para a sua arquitetura.
+* **fpeel-loops:** também ajuda a "desenrolar" loops em que é possível saber seu tamanho de antemão.
+
 Além disso, fiz algumas modificações na função dos primos que agora só usa divisores primos para ver se um candidato é primo ou não. Assim que essa função encontra um novo primo, ela adiciona no vetor de primos esse novo candidato, parando ao encontrar o n-ésimo. Outra modificação que fiz foi procurar por divisores até a raiz quadrada do candidato, já que acima disso não é possível encontrar um divisor válido, o que ajudou muito no desempenho do programa.
  
