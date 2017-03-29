@@ -10,3 +10,11 @@ Após realizar uma série de benchmarks com diferentes máquinas possuímos em m
 Ao longo desse experimento, escolhemos uma maneira de rankear as máquinas de acordo com os resultados obtidos nos passos anteriores. Para fazer isso da melhor maneira, lancei um olhar crítico sobre os resultados na planilha e descartei alguns dados, por serem esdrúxulos, programas usados para benchmark com poucos dados e projetos que não aprentavam dados sufiecientes, somente mostrando a pontuação final, por exemplo.
 
 ## 3. Procedimentos
+O primeiro passo para analisar as máquinas descritas foi observar as planilhas de dados de cada programa para decidir se alguns deles não seriam avaliados. No fim das contas, além dos programas que o professor desclassicou, decidi não usar os listados abaixo:   
+- **NAS Parallel:** poucas medidas.  
+- **AES Crypto:** também foram executadas poucas medidas.  
+- **Sorting:** usava somente dados baseados no tempo, gerando o score final a partir disso.  
+- **AES with CBC:** também possui poucas medidas realizadas.  
+- **FFTW:** somente três medidas foram feitas.  
+
+
