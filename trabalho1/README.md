@@ -189,7 +189,7 @@ Plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas 
 
 ![Benchmark 15](../graficos/benchmark15_matplotlib.jpeg)
 
-** Benchmark 17 - FFmpeg **  
+**Benchmark 17 - FFmpeg**  
 
 | Pontuação         | Máquinas |
 |-------------------|----------|
