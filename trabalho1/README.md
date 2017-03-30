@@ -108,6 +108,25 @@ Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação da
 
 **Benchmark 7 - fft + deep learning**  
 
+| Pontuação         | Máquina |
+|-------------------|---------|
+| 26,2981574539     | 6       |
+| 99,0787269682     | 7       |
+| 72,1943048576     | 8       |
+| 88,52596314909999 | 14      |
+| 66,41541038530001 | 23      |
+| 86,0971524288     | 30      |
+| 100               | 33      |
+| 100               | 35      |
+| 98,32495812400001 | 36      |
+| 80,40201005030001 | 37      |
+
+![Benchmark 7](../graficos/bechmark7_fft.jpeg)
+
+**Benchmark 9 - GraphicsMagick**  
+
+
+
 
 
 
