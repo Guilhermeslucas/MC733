@@ -27,26 +27,29 @@ Fazendo o método citado acima, é possível definir a pontuação em cada caso,
 Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas participantes para cada programa. Segue abaixo as pontuações calculadas a partir da fórmula mostrada acima e os gŕaficos de cada teste:  
 
 ** - Benchmark 1 - Gnu Plot **  
-|Notas|Máquinas| 
-|:---:|:------:| 
-|100|11| 
-|78|7|
-|28|	55|
-|80	|16|
-|34	|21|
-|70	|22|
-|78	|19|
-|72	|35|
-|22	|43|
-|80	|34|
-|30	|40|
-|76	|33|
-|72	|36|
-|70	|26|
-|70	|25|
-|64|	32|
-|76	|52|
-|90	|51|
-|88	|12|
-|48	|31|  
+
+| Pontuação | Máquinas |
+|-----------|----------|
+| 100       | 11       |
+| 78        | 7        |
+| 28        | 55       |
+| 80        | 16       |
+| 34        | 21       |
+| 70        | 22       |
+| 78        | 19       |
+| 72        | 35       |
+| 22        | 43       |
+| 80        | 34       |
+| 30        | 40       |
+| 76        | 33       |
+| 72        | 36       |
+| 70        | 26       |
+| 70        | 25       |
+| 64        | 32       |
+| 76        | 52       |
+| 90        | 51       |
+| 88        | 12       |
+| 48        | 31       |
+
+
 
