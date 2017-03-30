@@ -23,4 +23,5 @@ Feito isso, notei que teria problema em comparar o desempenho das máquinas, uma
 **Z(N) = (N/maiorValor)x100**  
 
 Vale ressaltar que **maiorValor** é o maior valor dentro do benchmark que esta sendo analisado no momento.    
-Fazendo o método citado acima, é possível definir a pontuação em cada caso, ou seja, analisar de maneira crítica qual computador se da melhor em cada tipo de tarefa. Porém, para obter uma média e conseguirmos estimar qual a melhor máquina de maneira geral, fazemos uma media de nota, por meio da soma das pontuações dos benchmarks que a maquina participou divido pelo número de benchmarks.
+Fazendo o método citado acima, é possível definir a pontuação em cada caso, ou seja, analisar de maneira crítica qual computador se da melhor em cada tipo de tarefa. Porém, para obter uma média e conseguirmos estimar qual a melhor máquina de maneira geral, fazemos uma media de nota, por meio da soma das pontuações dos benchmarks que a maquina participou divido pelo número de benchmarks.  
+Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas participantes para cada programa.
