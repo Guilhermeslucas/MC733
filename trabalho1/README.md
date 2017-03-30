@@ -82,6 +82,34 @@ Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação da
 
 ![Gráfico 2](../graficos/bechmark2_x264.jpeg)  
 
+**Benchmark 4 - GCC + Kernel**  
+
+| Pontuação  | Máquina |
+|------------|---------|
+| 51,773     | 4       |
+| 31,2057    | 7       |
+| 56,0284    | 12      |
+| 25,8865    | 13      |
+| 62,0567    | 16      |
+| 43,9716    | 17      |
+| 100        | 19      |
+| 60,9929    | 20      |
+| 36,5248    | 21      |
+| 36,8794    | 22      |
+| 74,8227    | 31      |
+| 29,4326    | 34      |
+| 98,9362    | 35      |
+| 34,3972    | 39      |
+| 34,0426    | 40      |
+| 51,773     | 43      |
+| 26,9504    | 55      |
+
+![Gráfico 3](../graficos/benchmark4_gcc.jpeg)
+
+**Benchmark 7 - fft + deep learning**  
+
+
+
 
 
 
