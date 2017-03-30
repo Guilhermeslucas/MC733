@@ -26,7 +26,7 @@ Vale ressaltar que **maiorValor** é o maior valor dentro do benchmark que esta 
 Fazendo o método citado acima, é possível definir a pontuação em cada caso, ou seja, analisar de maneira crítica qual computador se da melhor em cada tipo de tarefa. Porém, para obter uma média e conseguirmos estimar qual a melhor máquina de maneira geral, fazemos uma media de nota, por meio da soma das pontuações dos benchmarks que a maquina participou divido pelo número de benchmarks.  
 Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas participantes para cada programa. Segue abaixo as pontuações calculadas a partir da fórmula mostrada acima e os gŕaficos de cada teste:  
 
-** - Benchmark 1 - Gnu Plot **  
+**Benchmark 1 - Gnu Plot**  
 
 | Pontuação | Máquinas |
 |-----------|----------|
