@@ -211,7 +211,12 @@ Plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas 
 
 ![Benchmark 17](../graficos/benchmark17_ffmpeg.jpeg)
 
+## 3.2 Grafico e tabela finais  
+O gráfico e a tabela abaixo dizem respeito a pontuaçao final obtida por cada máquina. Essa pontuação final **PF(x)** foi obtida a partir da seguinte fórmula:
 
+**PF(x) = SomaTodos(x)/Ntotal(x)**  
+
+onde **SomaTodos(x)** é a soma dos valores de todos os benchmarks que a máquina participou e **Ntotal(x)** é o número de benchmarks que a máquina participou. Ou seja, essa fórmula, na verdade, está calculando a média entre as notas dos benchmarks de cada máquina. Para esse tratamento, criei um script chamado **final.py** que me da todos os resultados desejados. Abaixo a tabela e o gráfico da pontuação o obtida:  
 
 
 
