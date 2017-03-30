@@ -80,6 +80,11 @@ Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação da
 | 12,0103240215000007  | 47      |
 | 25,3283716353999999  | 55      |  
 
+![Gráfico 2](../graficos/benchmark2_x264.jpeg)  
+
+
+
+
 
 
 
