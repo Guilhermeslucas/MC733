@@ -7,15 +7,15 @@ Conseguir distinguir dispositivos computacionais pelos seus desempenhos é extre
 Após realizar uma série de benchmarks com diferentes máquinas possuímos em mãos uma infinidade de dados que nos permitem criar uma maneira para avaliar essas máquinas, procurando classificá-las.  
 
 ## 2. Resumo  
-Ao longo desse experimento, escolhemos uma maneira de rankear as máquinas de acordo com os resultados obtidos nos passos anteriores. Para fazer isso da melhor maneira, lancei um olhar crítico sobre os resultados na planilha e descartei alguns dados, por serem esdrúxulos, programas usados para benchmark com poucos dados e projetos que não aprentavam dados sufiecientes, somente mostrando a pontuação final, por exemplo.
+Ao longo desse experimento, escolheremos uma maneira de rankear as máquinas de acordo com os resultados obtidos nos passos anteriores. Para fazer isso da melhor maneira, lancei um olhar crítico sobre os resultados na planilha e descartei alguns dados, por serem esdrúxulos, programas usados para benchmark com poucos dados e projetos que não aprentavam dados sufiecientes, somente mostrando a pontuação final, por exemplo.
 
 ## 3. Procedimentos
 O primeiro passo para analisar as máquinas descritas foi observar as planilhas de dados de cada programa para decidir se alguns deles não seriam avaliados. No fim das contas, além dos programas que o professor desclassicou, decidi não usar os listados abaixo:   
-- **NAS Parallel:** poucas medidas.  
-- **AES Crypto:** também foram executadas poucas medidas.  
-- **Sorting:** usava somente dados baseados no tempo, gerando o score final a partir disso.  
-- **AES with CBC:** também possui poucas medidas realizadas.  
-- **FFTW:** somente três medidas foram feitas.  
+- **NAS Parallel (10):** poucas medidas.  
+- **AES Crypto (12):** também foram executadas poucas medidas.  
+- **Sorting (16):** usava somente dados baseados no tempo, gerando o score final a partir disso.  
+- **AES with CBC (18):** também possui poucas medidas realizadas.  
+- **FFTW (19):** somente três medidas foram feitas.  
 
 Além disso, tive que olhar para cada benchmark e analisar o que as notas altas representavam, ou seja, listar quando altas notas representavam um melhor ou pior desempenho. Porém, somente o **GNU GZip** foi diferente nesse aspecto, sendo as maiores notas representando os piores desempenhos.  
 Feito isso, notei que teria problema em comparar o desempenho das máquinas, uma vez que as pontuações não eram padronizadas, ou seja, não variavam dentro de um intervalo fixo. Visto isso, tive que padronizar todos os scores, colocando-os em um intervalo de **0** a **100**, fazendo com que o maior de todos eles se tornasse o **100**. Simplificando, cada nova nota **Z(N)** baseada no antigo score **N** é dada pela seguinte fórmula:  
