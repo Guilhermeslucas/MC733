@@ -17,6 +17,7 @@ O primeiro passo para analisar as máquinas descritas foi observar as planilhas 
 - **AES with CBC:** também possui poucas medidas realizadas.  
 - **FFTW:** somente três medidas foram feitas.  
 
+Além disso, tive que olhar para cada benchmark e analisar o que as notas altas representavam, ou seja, listar quando altas notas representavam um melhor ou pior desempenho. Porém, somente o **GNU GZip** foi diferente nesse aspecto, sendo as maiores notas representando os piores desempenhos.  
 Feito isso, notei que teria problema em comparar o desempenho das máquinas, uma vez que as pontuações não eram padronizadas, ou seja, não variavam dentro de um intervalo fixo. Visto isso, tive que padronizar todos os scores, colocando-os em um intervalo de **0** a **100**, fazendo com que o maior de todos eles se tornasse o **100**. Simplificando, cada nova nota **Z(N)** baseada no antigo score **N** é dada pela seguinte fórmula:  
   
 **Z(N) = (N/maiorValor)x100**  
