@@ -26,7 +26,7 @@ Vale ressaltar que **maiorValor** é o maior valor dentro do benchmark que esta 
 Fazendo o método citado acima, é possível definir a pontuação em cada caso, ou seja, analisar de maneira crítica qual computador se da melhor em cada tipo de tarefa. Porém, para obter uma média e conseguirmos estimar qual a melhor máquina de maneira geral, fazemos uma media de nota, por meio da soma das pontuações dos benchmarks que a maquina participou divido pelo número de benchmarks.  
 
 ## 3.1 Gráficos e pontuações normalizadas  
-Plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas participantes para cada programa. Segue abaixo as pontuações calculadas a partir da fórmula mostrada acima e os gŕaficos de cada teste:  
+Plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas participantes para cada programa. Lancei mão de dois softwares para esse passo: o **SciDavis** que é exclente para plotar gráficas de maneira muito simplista e o **LibreOffice Calc**. Segue abaixo as pontuações calculadas a partir da fórmula mostrada acima e os gŕaficos de cada teste:  
 
 **Benchmark 1 - Gnu Plot**  
 
@@ -188,6 +188,28 @@ Plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas 
 | 48,3691880638 | 46       |
 
 ![Benchmark 15](../graficos/benchmark15_matplotlib.jpeg)
+
+** Benchmark 17 - FFmpeg **  
+
+| Pontuação         | Máquinas |
+|-------------------|----------|
+| 95,3872728131     | 3        |
+| 37,5604775546     | 4        |
+| 85,936818508      | 7        |
+| 46,3123700499     | 13       |
+| 79,5542085829     | 15       |
+| 100               | 19       |
+| 36,501567435      | 27       |
+| 86,1108801522     | 35       |
+| 27,7527449748     | 39       |
+| 77,75999605760001 | 41       |
+| 77,87553210439999 | 42       |
+| 14,1566060644     | 43       |
+| 44,6523664954     | 44       |
+| 89,32742126540001 | 47       |
+
+
+![Benchmark 17](../graficos/benchmark17_ffmpeg.jpeg)
 
 
 
