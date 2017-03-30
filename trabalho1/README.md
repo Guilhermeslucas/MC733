@@ -51,5 +51,9 @@ Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação da
 | 88        | 12       |
 | 48        | 31       |
 
+![Gráfico 1](graficos/benchmark1_gnuplot.jpeg)
+
+
+
 
 
