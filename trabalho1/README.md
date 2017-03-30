@@ -17,4 +17,4 @@ O primeiro passo para analisar as máquinas descritas foi observar as planilhas 
 - **AES with CBC:** também possui poucas medidas realizadas.  
 - **FFTW:** somente três medidas foram feitas.  
 
-
+Feito isso, notei que teria problema em comparar o desempenho das máquinas, uma vez que as pontuações não eram padronizadas, ou seja, não variavam dentro de um intervalo fixo. Visto isso, tive que padronizar todos os scores, colocando-os em um intervalo de **0** a **100**, fazendo com que o maior de todos eles se tornasse o **100** e o menor o **0**.
