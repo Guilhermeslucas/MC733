@@ -125,6 +125,24 @@ Feito isso, plotamos os gráficos para cada benchmark, ou seja, a pontuação da
 
 **Benchmark 9 - GraphicsMagick**  
 
+| Pontuação      | Máquina |
+|----------------|---------|
+| 60,676480672   | 7       |
+| 100            | 15      |
+| 62,2302210902  | 20      |
+| 70,9206173099  | 27      |
+| 37,090319518   | 30      |
+| 157,4282026579 | 36      |
+| 23,0986293243  | 39      |
+| 99,7478420807  | 45      |
+| 56,5410156401  | 46      |
+| 38,9571908426  | 54      |
+
+![Benchmark 9](../graficos/benchmark9_graphics.jpeg)
+
+**Benchmark 14 - Solver**
+
+
 
 
 
