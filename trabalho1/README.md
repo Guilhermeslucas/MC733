@@ -18,5 +18,8 @@ O primeiro passo para analisar as máquinas descritas foi observar as planilhas 
 - **FFTW:** somente três medidas foram feitas.  
 
 Feito isso, notei que teria problema em comparar o desempenho das máquinas, uma vez que as pontuações não eram padronizadas, ou seja, não variavam dentro de um intervalo fixo. Visto isso, tive que padronizar todos os scores, colocando-os em um intervalo de **0** a **100**, fazendo com que o maior de todos eles se tornasse o **100**. Simplificando, cada nova nota **Z(X)** baseada no antigo score **X** é dada pela seguinte fórmula:  
-$ Z(x) = (x/maiorValor)*100 $    
+  
+**Z(x) = (x/maiorValor)*100**  
+
+Vale ressaltar que **maiorValor** é o maior valor dentro do benchmark que esta sendo analisado no momento.    
 Fazendo o método citado acima, é possível definir a pontuação em cada caso, ou seja, analisar de maneira crítica qual computador se da melhor em cada tipo de tarefa. Porém, para obter uma média e conseguirmos estimar qual a melhor máquina de maneira geral, fazemos uma media de nota, por meio da soma das pontuações dos benchmarks que a maquina participou divido pelo número de benchmarks.
