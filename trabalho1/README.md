@@ -270,7 +270,8 @@ Nesta seção, falaremos de maneira mais detalhada sobre os projetos que realiza
 
 - **GNU Gzip:** padrão de compressão mais comum na internet, esse benchmark visou analisar o tempo, que é uma ótima métrica, já que o usuário final realmente só deseja não ficar esperando na frente da máquina, uso de cpu, para saber se esse programa funciona bem com outros processos rodando e não usa todo o processamento para ele e quantia total de memoria, também ajudando na análise se esse programa lida bem com outros processos rodando simultaneamente na máquina.  
 
-- **Solver:** Solver foi um benchmark bem completo. Entre as características com suas importâncias já citadas nos outros dois programas estão tempo de execução e cache miss.
+- **Solver:** Solver foi um benchmark bem completo. Entre as características com suas importâncias já citadas nos outros dois programas estão tempo de execução, cache miss e porcentagem de tempo de disco. Além disso, ele analisa a porcentagem de branch misses, muito importante para identificar a eficacia do algoritimo de branch prediction, já que branches são operações custosas. Também analisam a porcentagem de TLB misses, permitindo assim analisar necessidade de aumentar ou melhorar a organização da TLB.  
+
 
 ## 4. Conclusão
 Após realizar todos os testes em tarefas muito distintas e máquinas também com características totalmente heterogêneas umas das outras, é possível notar que existem máquinas melhores na média. Porém, essa média pode não ser o melhor valor para ser analisado, uma vez que, certos computadores tem desempenhos explêndidos quando executam um tipo de teste muito específico, porém, sua performance despenca ao realizar tarefas mais abrangentes, por exemplo.  
