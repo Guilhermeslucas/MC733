@@ -211,12 +211,73 @@ Plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas 
 
 ![Benchmark 17](../graficos/benchmark17_ffmpeg.jpeg)
 
-## 3.2 Grafico e tabela finais  
+## 3.2 Tabela final  
 O gráfico e a tabela abaixo dizem respeito a pontuaçao final obtida por cada máquina. Essa pontuação final **PF(x)** foi obtida a partir da seguinte fórmula:
 
 **PF(x) = SomaTodos(x)/Ntotal(x)**  
 
-onde **SomaTodos(x)** é a soma dos valores de todos os benchmarks que a máquina participou e **Ntotal(x)** é o número de benchmarks que a máquina participou. Ou seja, essa fórmula, na verdade, está calculando a média entre as notas dos benchmarks de cada máquina. Para esse tratamento, criei um script chamado **final.py** que me da todos os resultados desejados. Abaixo a tabela e o gráfico da pontuação o obtida:  
+onde **SomaTodos(x)** é a soma dos valores de todos os benchmarks que a máquina participou e **Ntotal(x)** é o número de benchmarks que a máquina participou. Ou seja, essa fórmula, na verdade, está calculando a média entre as notas dos benchmarks de cada máquina. Para esse tratamento, criei um script chamado **final.py** que me da todos os resultados desejados. Abaixo a tabela da pontuação o obtida:  
+
+| Máquina | Pontuação         |
+|---------|-------------------|
+| 19      | 92,59999999999999 |
+| 51      | 90                |
+| 33      | 88                |
+| 37      | 87,77             |
+| 35      | 83,98             |
+| 15      | 77,33             |
+| 52      | 76                |
+| 38      | 75,08             |
+| 20      | 74,40000000000001 |
+| 41      | 71,90900000000001 |
+| 12      | 70,73             |
+| 10      | 70,66             |
+| 32      | 70,31999999999999 |
+| 16      | 70,20999999999999 |
+| 45      | 69,43000000000001 |
+| 7       | 69,2              |
+| 28      | 69                |
+| 46      | 66,91             |
+| 8       | 66,25             |
+| 26      | 65,77             |
+| 25      | 63,669            |
+| 24      | 59,61             |
+| 30      | 58,9              |
+| 4       | 58,85             |
+| 22      | 58,12             |
+| 34      | 57,877            |
+| 14      | 57,7              |
+| 23      | 57,29             |
+| 17      | 53,25             |
+| 31      | 52,34             |
+| 47      | 50,668            |
+| 18      | 49,4              |
+| 27      | 49,33             |
+| 40      | 46,81             |
+| 39      | 41,97             |
+| 6       | 41,23             |
+| 44      | 41,12             |
+| 54      | 38,95             |
+| 21      | 36,75             |
+| 13      | 36,09             |
+| 2       | 35,28             |
+| 55      | 26,75             |
+| 43      | 24,9              |
+
+## 3.3 Análise detalhada
+Nesta seção, falaremos de maneira mais detalhada sobre os projetos que realizamos os benchmarks.  
+- **x264:** projeto usado para codificar e decodificar vídeos muito comum na internet foi usado para benchmark por exigir bastante de vários recursos da máquina. Neste caso, foram analisados tempo de execução, para que pudéssemos analisar o tempo decorrido entre o inicio e o fim da tarefa, cache miss, que dá uma ótima moção do quão boa a cache do computador pesquisado é, e page fault, que analisa o auxílio da memória ram durante a execução de um processo.  
+
+- **GNU Gzip:** padrão de compressão mais comum na internet, esse benchmark visou analisar o tempo, que é uma ótima métrica, já que o usuário final realmente só deseja não ficar esperando na frente da máquina, uso de cpu, para saber se esse programa funciona bem com outros processos rodando e não usa todo o processamento para ele e quantia total de memoria, também ajudando na análise se esse programa lida bem com outros processos rodando simultaneamente na máquina.  
+
+- **Solver:** Solver foi um benchmark bem completo. Entre as características com suas importâncias já citadas nos outros dois programas estão tempo de execução e cache miss.
+
+## 4. Conclusão
+Após realizar todos os testes em tarefas muito distintas e máquinas também com características totalmente heterogêneas umas das outras, é possível notar que existem máquinas melhores na média. Porém, essa média pode não ser o melhor valor para ser analisado, uma vez que, certos computadores tem desempenhos explêndidos quando executam um tipo de teste muito específico, porém, sua performance despenca ao realizar tarefas mais abrangentes, por exemplo.  
+
+
+
+ 
 
 
 
