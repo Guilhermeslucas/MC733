@@ -212,7 +212,7 @@ Plotamos os gráficos para cada benchmark, ou seja, a pontuação das máquinas 
 ![Benchmark 17](../graficos/benchmark17_ffmpeg.jpeg)
 
 ## 3.2 Tabela final  
-O gráfico e a tabela abaixo dizem respeito a pontuaçao final obtida por cada máquina. Essa pontuação final **PF(x)** foi obtida a partir da seguinte fórmula:
+A tabela abaixo dizem respeito a pontuaçao final obtida por cada máquina. Essa pontuação final **PF(x)** foi obtida a partir da seguinte fórmula:
 
 **PF(x) = SomaTodos(x)/Ntotal(x)**  
 
