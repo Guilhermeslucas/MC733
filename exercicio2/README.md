@@ -12,4 +12,13 @@ Para realizar esse exercício, o primeiro passo foi instalar o **DineroIV**, com
 Após instalar o **DineroIV** com as instruções que estavam na página do exercício, usei o script **cache_size.sh** para encontrar o tamanho que me dava o melhor "tamanho-benefício". Dentro da pasta **cache_size_results** temos os resultados para vários tamanhos de cache para os programas analisados. Estes arquivos estão nomeados de acordo com o nome do programa que esta sendo analisado.  
 Aqui, vale ressaltar que usamos a flag **-maxtrace 20** devido ao tempo extremamente grande que o teste estava gastando sem essa flag, falhando muitas vezes por queda de conexão com o **SSH** ou tinha que interrompê-los devido a alguma aula que ia acontecer na sala que eu estava realizando testes. Além disso, **20** foi uma opção que o professor sugeriu e que já nos dá um ótima noção de desempenho da cache.  
 A princípio, pensei em plotar dois gráficos para cada tamanho e programa, analisando a taxa de miss **cache de dados** e a **cache de instruções**. Porém, é possível notar pelos resultados no diretorio **cache_size_results** que a taxa de miss na **cache de instruçõs** é bem pequena, em todos os casos. Considerando isso e o fato de que buscar dados na memória é uma operação extremamente custosa e lenta, decidi plotar e analisar os gráficos com a taxa de miss na **cache de dados**. Abaixo encontram-se as análises:  
+
+![Gráfico 1 - crafty_f2b](graficos/crafty_f2b.jpeg)  
+
+![Gráfico 2 - gcc_f2b](graficos/gcc_f2b.jpeg)  
+
+![Gráfico 3 - gzip_f2b](graficos/gzip_f2b.jpeg)  
+
+![Gráfico 4 - mcf_f2b](graficos/mcf_f2b.jpeg)  
+
    
