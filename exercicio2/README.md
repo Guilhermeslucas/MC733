@@ -21,4 +21,8 @@ A princípio, pensei em plotar dois gráficos para cada tamanho e programa, anal
 
 ![Gráfico 4 - mcf_f2b](graficos/mcf_f2b.jpeg)  
 
+
+Como podemos notar pelos gráficos, o aumento do tamanho da cache, para todos os casos tem uma melhora muito grande na taxa de miss. Apesar do último gráfico mostrar pouca melhora, os outros três tem diminuição de miss praticamente exponencial ao dobrar o tamanho da **cache de dados**. Por esse motivo, decidi que vale a pena usar a cache de maior tamanho para os testes posteriores. Desta maneira, fixaremos o tamanho da **cache de dados** e da **cache de instruções** como sendo **64k**.  
+
+
    
