@@ -30,5 +30,63 @@ Como podemos notar pelos gráficos, o aumento do tamanho da cache, para todos os
 ### 3.2 Análise de tamanho de bloco e associatividade  
 Após obtermos o melhor tamanho de memória no item anterior, vamos variar os valores de associatividade e tamanho de bloco de cache, para que, dessa maneira, possamos determinar uma configuração ótima para nossos programas testados. Existem muitas maneiras de mostrar esses dados, porém tentei evitar as que envolvem muitos gráficos, e preferi por mostrar em um gráfico a **taxa de misses** para um dado par de **tamanho de bloco de cache** e **associatividade**. Assim, para cada programa
 
+#### 3.2.1 Crafty_f2b  
+
+| (Tamanho de Cache, Associatividade) | (Taxa de Miss) |
+|-------------------------------------|----------------|
+| (8,8)                               | 0,45           |
+| (8,16)                              | 0,43           |
+| (8,32)                              | 0,43           |
+| (16,8)                              | 0,34           |
+| (16,16)                             | 0,31           |
+| (16,32)                             | 0,31           |
+| (32,8)                              | 0,34           |
+| (32,16)                             | 0,3            |
+| (32,32)                             | 0,29           |  
+
+
+#### 3.2.2 GCC_f2b  
+
+| (Tamanho de Bloco, Associatividade) | Taxa de Miss |
+|-------------------------------------|--------------|
+| (8,8)                               | 2,15         |
+| (8,16)                              | 2,1          |
+| (8,32)                              | 2,06         |
+| (16,8)                              | 1,46         |
+| (16,16)                             | 1,44         |
+| (16,32)                             | 1,42         |
+| (32,8)                              | 0,98         |
+| (32,16)                             | 0,96         |
+| (32,32)                             | 0,95         |  
+
+#### 3.2.3 Gzip_f2b  
+
+| (Tamanho de Bloco, Associatividade) | Taxa de Miss |
+|-------------------------------------|--------------|
+| (8,8)                               | 13,05        |
+| (8,16)                              | 13,06        |
+| (8,32)                              | 13,06        |
+| (16,8)                              | 7,5          |
+| (16,16)                             | 7,5          |
+| (16,32)                             | 7,5          |
+| (32,8)                              | 4,6          |
+| (32,16)                             | 4,6          |
+| (32,32)                             | 4,6          |  
+
+#### 3.2.4 Mcf_f2b  
+
+| (Tamanho de Bloco, Associatividade) | Taxa de Miss |
+|-------------------------------------|--------------|
+| (8,8)                               | 13,05        |
+| (8,16)                              | 13,06        |
+| (8,32)                              | 13,06        |
+| (16,8)                              | 7,5          |
+| (16,16)                             | 7,5          |
+| (16,32)                             | 7,5          |
+| (32,8)                              | 4,6          |
+| (32,16)                             | 4,6          |
+| (32,32)                             | 4,6          |  
+
+
 
    
