@@ -1,0 +1,621 @@
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 8
+-l1-dbsize 8
+-l1-isbsize 8
+-l1-dsbsize 8
+-l1-iassoc 8
+-l1-dassoc 8
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		        2750	        2750	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       22000
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       22000
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   153807945	           0	   153807945	   113643361	    40164584	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7389	      0.2611	      0.0000
+
+ Demand Misses		    20075121	           0	    20075121	    11744739	     8330382	           0
+  Demand miss rate	      0.1305	      0.0000	      0.1305	      0.1033	      0.2074	      0.0000
+
+ Multi-block refs           8613917
+ Bytes From Memory	   160600968
+ ( / Demand Fetches)	      1.0442
+ Bytes To Memory	    83635848
+ ( / Demand Writes)	      2.0823
+ Total Bytes r/w Mem	   244236816
+ ( / Demand Fetches)	      1.5879
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 8
+-l1-dbsize 8
+-l1-isbsize 8
+-l1-dsbsize 8
+-l1-iassoc 16
+-l1-dassoc 16
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		        2750	        2750	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       22000
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       22000
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   153807945	           0	   153807945	   113643361	    40164584	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7389	      0.2611	      0.0000
+
+ Demand Misses		    20082760	           0	    20082760	    11749881	     8332879	           0
+  Demand miss rate	      0.1306	      0.0000	      0.1306	      0.1034	      0.2075	      0.0000
+
+ Multi-block refs           8613917
+ Bytes From Memory	   160662080
+ ( / Demand Fetches)	      1.0446
+ Bytes To Memory	    83617064
+ ( / Demand Writes)	      2.0819
+ Total Bytes r/w Mem	   244279144
+ ( / Demand Fetches)	      1.5882
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 8
+-l1-dbsize 8
+-l1-isbsize 8
+-l1-dsbsize 8
+-l1-iassoc 32
+-l1-dassoc 32
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		        2750	        2750	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       22000
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       22000
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   153807945	           0	   153807945	   113643361	    40164584	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7389	      0.2611	      0.0000
+
+ Demand Misses		    20081063	           0	    20081063	    11748233	     8332830	           0
+  Demand miss rate	      0.1306	      0.0000	      0.1306	      0.1034	      0.2075	      0.0000
+
+ Multi-block refs           8613917
+ Bytes From Memory	   160648504
+ ( / Demand Fetches)	      1.0445
+ Bytes To Memory	    83610560
+ ( / Demand Writes)	      2.0817
+ Total Bytes r/w Mem	   244259064
+ ( / Demand Fetches)	      1.5881
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 16
+-l1-dbsize 16
+-l1-isbsize 16
+-l1-dsbsize 16
+-l1-iassoc 8
+-l1-dassoc 8
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		        1468	        1468	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       23488
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       23488
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   149493660	           0	   149493660	   110618221	    38875439	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7400	      0.2600	      0.0000
+
+ Demand Misses		    11268172	           0	    11268172	     7011896	     4256276	           0
+  Demand miss rate	      0.0754	      0.0000	      0.0754	      0.0634	      0.1095	      0.0000
+
+ Multi-block refs           4299632
+ Bytes From Memory	   180290752
+ ( / Demand Fetches)	      1.2060
+ Bytes To Memory	    92242288
+ ( / Demand Writes)	      2.3728
+ Total Bytes r/w Mem	   272533040
+ ( / Demand Fetches)	      1.8230
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 16
+-l1-dbsize 16
+-l1-isbsize 16
+-l1-dsbsize 16
+-l1-iassoc 16
+-l1-dassoc 16
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		        1468	        1468	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       23488
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       23488
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   149493660	           0	   149493660	   110618221	    38875439	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7400	      0.2600	      0.0000
+
+ Demand Misses		    11268577	           0	    11268577	     7011152	     4257425	           0
+  Demand miss rate	      0.0754	      0.0000	      0.0754	      0.0634	      0.1095	      0.0000
+
+ Multi-block refs           4299632
+ Bytes From Memory	   180297232
+ ( / Demand Fetches)	      1.2061
+ Bytes To Memory	    92205744
+ ( / Demand Writes)	      2.3718
+ Total Bytes r/w Mem	   272502976
+ ( / Demand Fetches)	      1.8228
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 16
+-l1-dbsize 16
+-l1-isbsize 16
+-l1-dsbsize 16
+-l1-iassoc 32
+-l1-dassoc 32
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		        1468	        1468	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       23488
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       23488
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   149493660	           0	   149493660	   110618221	    38875439	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7400	      0.2600	      0.0000
+
+ Demand Misses		    11267364	           0	    11267364	     7008817	     4258547	           0
+  Demand miss rate	      0.0754	      0.0000	      0.0754	      0.0634	      0.1095	      0.0000
+
+ Multi-block refs           4299632
+ Bytes From Memory	   180277824
+ ( / Demand Fetches)	      1.2059
+ Bytes To Memory	    92191200
+ ( / Demand Writes)	      2.3715
+ Total Bytes r/w Mem	   272469024
+ ( / Demand Fetches)	      1.8226
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 32
+-l1-dbsize 32
+-l1-isbsize 32
+-l1-dsbsize 32
+-l1-iassoc 8
+-l1-dassoc 8
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		         819	         819	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       26208
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       26208
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   147357740	           0	   147357740	   109125693	    38232047	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7405	      0.2595	      0.0000
+
+ Demand Misses		     6852241	           0	     6852241	     4629153	     2223088	           0
+  Demand miss rate	      0.0465	      0.0000	      0.0465	      0.0424	      0.0581	      0.0000
+
+ Multi-block refs           2163712
+ Bytes From Memory	   219271712
+ ( / Demand Fetches)	      1.4880
+ Bytes To Memory	   109261376
+ ( / Demand Writes)	      2.8578
+ Total Bytes r/w Mem	   328533088
+ ( / Demand Fetches)	      2.2295
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 32
+-l1-dbsize 32
+-l1-isbsize 32
+-l1-dsbsize 32
+-l1-iassoc 16
+-l1-dassoc 16
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		         819	         819	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       26208
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       26208
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   147357740	           0	   147357740	   109125693	    38232047	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7405	      0.2595	      0.0000
+
+ Demand Misses		     6852160	           0	     6852160	     4628724	     2223436	           0
+  Demand miss rate	      0.0465	      0.0000	      0.0465	      0.0424	      0.0582	      0.0000
+
+ Multi-block refs           2163712
+ Bytes From Memory	   219269120
+ ( / Demand Fetches)	      1.4880
+ Bytes To Memory	   109231296
+ ( / Demand Writes)	      2.8571
+ Total Bytes r/w Mem	   328500416
+ ( / Demand Fetches)	      2.2293
+
+---Execution complete.
+tracename gzip_f2b
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 65536
+-l1-dsize 65536
+-l1-ibsize 32
+-l1-dbsize 32
+-l1-isbsize 32
+-l1-dsbsize 32
+-l1-iassoc 32
+-l1-dassoc 32
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat s
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   399999987	   399999987	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		         819	         819	           0	           0	           0	           0
+  Demand miss rate	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs                 0
+ Bytes From Memory	       26208
+ ( / Demand Fetches)	      0.0001
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	       26208
+ ( / Demand Fetches)	      0.0001
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		   147357740	           0	   147357740	   109125693	    38232047	           0
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.7405	      0.2595	      0.0000
+
+ Demand Misses		     6850850	           0	     6850850	     4627120	     2223730	           0
+  Demand miss rate	      0.0465	      0.0000	      0.0465	      0.0424	      0.0582	      0.0000
+
+ Multi-block refs           2163712
+ Bytes From Memory	   219227200
+ ( / Demand Fetches)	      1.4877
+ Bytes To Memory	   109202368
+ ( / Demand Writes)	      2.8563
+ Total Bytes r/w Mem	   328429568
+ ( / Demand Fetches)	      2.2288
+
+---Execution complete.
