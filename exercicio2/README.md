@@ -98,7 +98,7 @@ Após obtermos o melhor tamanho de memória no item anterior, vamos variar os va
 
 ## 4. Conclusão  
 
-
+Após analisar os dados obtidos pelo **DineroIV** notamos que, após fixar um **tamanho total de cache**, ao variar o **tamanho de cada bloco** dela, a diferença ta taxa de miss é gigantesca e **quanto maior o bloco, menor é a taxa de miss**. Porém, essa diferença gritante não é observada quando variamos a **associatividade da cache**. Na maioria dos programas testados acima, a **taxa de miss continuava a mesma ao mudar a associatividade**. Assim, após todo esse experimento, notamos que alterar o **tamanho total da cache tem muito efeito sobre a taxa de miss, assim como alterar o tamanho de cada bloco dela**. E em ambos os casos, quanto maior, menor é a taxa de miss. Porém **alterar a associatividade causa pouquíssimo efeito**, muitas vezes não alterando em nada as taxas de miss na cache.
 
 
    
