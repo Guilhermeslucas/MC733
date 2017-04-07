@@ -32,6 +32,8 @@ Após obtermos o melhor tamanho de memória no item anterior, vamos variar os va
 
 #### 3.2.1 Crafty_f2b  
 
+![Gráfico 5 - Crafty_f2b_all](graficos/crafty_f2b_all.jpeg)
+
 | (Tamanho de Cache, Associatividade) | (Taxa de Miss) |
 |-------------------------------------|----------------|
 | (8,8)                               | 0,45           |
@@ -47,6 +49,8 @@ Após obtermos o melhor tamanho de memória no item anterior, vamos variar os va
 
 #### 3.2.2 GCC_f2b  
 
+![Gráfico 6 - Gcc_f2b_all](graficos/gcc_f2b_all.jpeg)
+
 | (Tamanho de Bloco, Associatividade) | Taxa de Miss |
 |-------------------------------------|--------------|
 | (8,8)                               | 2,15         |
@@ -60,6 +64,8 @@ Após obtermos o melhor tamanho de memória no item anterior, vamos variar os va
 | (32,32)                             | 0,95         |  
 
 #### 3.2.3 Gzip_f2b  
+
+![Gráfico 7 - Gzip_f2b_all](graficos/gzip_f2b_all.jpeg)
 
 | (Tamanho de Bloco, Associatividade) | Taxa de Miss |
 |-------------------------------------|--------------|
@@ -75,6 +81,8 @@ Após obtermos o melhor tamanho de memória no item anterior, vamos variar os va
 
 #### 3.2.4 Mcf_f2b  
 
+![Gráfico 5 - Mcf_f2b_all](graficos/mcf_f2b_all.jpeg)
+
 | (Tamanho de Bloco, Associatividade) | Taxa de Miss |
 |-------------------------------------|--------------|
 | (8,8)                               | 13,05        |
@@ -86,6 +94,10 @@ Após obtermos o melhor tamanho de memória no item anterior, vamos variar os va
 | (32,8)                              | 4,6          |
 | (32,16)                             | 4,6          |
 | (32,32)                             | 4,6          |  
+
+
+## 4. Conclusão  
+
 
 
 
