@@ -49,3 +49,7 @@ E a partir desse ponto realizamos a simulação com o seguinte comando:
 Após nos habituarmos com esses passos, conseguimos analisar número de vezes que cada instrução era executada e também calcular o **CPI Médio** de cada benchmark rodando na arquitetura **MIPS**.  
 
 ## 3. Experimento  
+Nessa seção, irei descrever e mostrar os resultados dos exercícios propostos.  
+### 3.1 Contando instruções 
+Esse exercício se baseava em analisar quantas vezes determinadas isntruções eram realizadas.Para isso, usei o código **hello.c** para realizar testes. Esse codigo soma dois números e printa o resultado deles. Após editar também o código presente em **mips_isa.cpp**, para analisar quantas vezes cada parte do código era executada, obtive os seguintes resultados:  
+
