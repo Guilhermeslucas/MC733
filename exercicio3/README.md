@@ -71,7 +71,8 @@ está no arquivo **dump.out**, também nesse repositório. Após analisar rapida
 
 Agora, analisando o código da função **ac_behavior( add )**, vemos que é extremamente intuitivo descobrir o que ele faz. No caso, ocorre a soma entre dois **registradores**, indexados dentro do **banco de registradores** e seu resultado sendo direcionado para um **registrador destino**. Além disso, ao final é checado se ocorreu ou não **overflow** por meio da análise do **bit de sinal** dos membros envolvidos na operação.  
 
-### 3.2 Medindo desempenho  
+### 3.2 Avaliando o desempenho 
+ 
 
 
  
