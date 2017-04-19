@@ -51,7 +51,19 @@ Após nos habituarmos com esses passos, conseguimos analisar número de vezes qu
 ## 3. Experimento  
 Nessa seção, irei descrever e mostrar os resultados dos exercícios propostos.  
 ### 3.1 Contando instruções 
-Esse exercício se baseava em analisar quantas vezes determinadas isntruções eram realizadas.Para isso, usei o código **hello.c** para realizar testes. Esse codigo soma dois números e printa o resultado deles. Após editar também o código presente em **mips_isa.cpp**(as funções modificadas foram ac_behaviour(add), ac_behavior(addi), ac_behaviour(addu), ac_behaviour(addiu), ac_behaviour(begin), ac_behaviour(end)), para analisar quantas vezes cada parte do código era executada, obtive os seguintes resultados: 
+Esse exercício se baseava em analisar quantas vezes determinadas isntruções eram realizadas.Para isso, usei o código **hello.c** para realizar testes. Esse codigo soma dois números e printa o resultado deles. Após editar também o código presente em **mips_isa.cpp** (as funções modificadas foram ac_behaviour(add), ac_behavior(addi), ac_behaviour(addu), ac_behaviour(addiu), ac_behaviour(begin), ac_behaviour(end)), para analisar quantas vezes cada parte do código era executada, obtive os seguintes resultados: 
+
+1. Contador_Add = 674.
+2. Contador_Begin = 1.
+3. Contador_End = 1.
+
+Após olhar esses resultados, notamos que eles fazem sentido, uma vez que o **begin** e o **end** são executados somente uma vez cada, como o próprio enunciado explicou e as operações de **add** são usadas muitas vezes durante a execução de um simples **hello.c**, já que é necessário computador **saltos** e **escritas no kernel**. 
+Além disso, essa parte do experimento pediu para que usássemos o a ferramenta **objdump** para olhar o **assembly** gerado por esse código. Este resultado, gerado pelo comando  
+
+```
+mips-newlib-elf-objdump -d hello.mips
+```  
+está no arquivo **dump.out**, também nesse repositório.
 
  
 
