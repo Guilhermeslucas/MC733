@@ -5,9 +5,9 @@
 ## 1. Introdução
 Desde a invenção da Computação, engenheiros procuram por projetos de hardware cada vez mais rápidos e melhores, para realizar uma enorme gama de atividades de maneira mais eficaz, levando a maiores lucros e resultados significativos para os usuários. Junto com essas melhorias, é necessária a criação de métodos que avaliem as máquinas de maneira transparente e verdadeira, para que o usuário possa escolher qual equipamento melhor se encaixa na sua necessidade. Dito isso, existem várias maneiras de comparar hardwares disponíveis:  
 
-- Tempo gasto do início ao fim de uma atividade  
-- Porcentagem de memória gasta para o processo analisado  
-- Ciclos gastos para execução de uma instrução (CPI)    
+- Tempo gasto do início ao fim de uma atividade.  
+- Porcentagem de memória gasta para o processo analisado.  
+- Ciclos gastos para execução de uma instrução (CPI).    
 
 O nosso foco nesse experimento é analisar esse último critério apresentado. Para podermos entender o que é **CPI** (ciclos por instrução) devemos ter em mente que um processador realiza suas tarefas por meio de ciclos, que são estágios em que o computador realizar algum tipo de tarefa muito bem definida. Nesse exercício, vamos analisar a arquitetura **MIPS**. Essa tem os seguintes estágios que definem um ciclo:  
 
@@ -25,4 +25,7 @@ Os nomes desses estágios são, na maioria dos casos, utilizados com seu nome em
     4. Acesso de memória para buscar dados necessários para executar a instrução.
     5. Escreve os resultados de volta na memória.  
     
+Assim, fica claro que **CPI** é uma medida de extrema importância quando estamos analisando um sistema, já que quanto mais ciclos um processador gastar para executar uma instrução, existe uma grande chance dele gastar mais tempo e energia.  
+Então, notamos que, para avaliarmos máquinas diferentes em simulares, continua sendo importante medidas como **tempo, CPI e quantidade de memória**.  
 
+## 2. Resumo  
