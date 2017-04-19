@@ -72,7 +72,23 @@ está no arquivo **dump.out**, também nesse repositório. Após analisar rapida
 Agora, analisando o código da função **ac_behavior( add )**, vemos que é extremamente intuitivo descobrir o que ele faz. No caso, ocorre a soma entre dois **registradores**, indexados dentro do **banco de registradores** e seu resultado sendo direcionado para um **registrador destino**. Além disso, ao final é checado se ocorreu ou não **overflow** por meio da análise do **bit de sinal** dos membros envolvidos na operação.  
 
 ### 3.2 Avaliando o desempenho 
- 
+Nesse trecho do experimento, vamos calcular o **CPI Médio** de alguns programas sugeridos na arquitetura **MIPS**. Seguem os resultados abaixo:  
+
+#### 3.2.1 Hello World
+Essa análise diz respeito a saida do simulador quando testado com o código **hello.c**. A saída completa esta no arquivo **saida_hello.txt**, também nesse diretório.
+
+
+#### 3.2.2 Rijndael Coder
+Essa análise diz respeito a saida do simulador quando testado com o código **Rijndael Coder**. A saída completa esta no arquivo **saida_rijndael.txt**, também nesse diretório.  
+
+#### 3.2.3 SHA (Large)
+Essa análise diz respeito a saida do simulador quando testado com o código **SHA**. A saída completa esta no arquivo **saida_sha.txt**, também nesse diretório. Esta foi a análise que levou mais tempo, já que não estava realizando as análises **small**, como nos outros casos.  
+
+## 4. Conclusão
+Após realizar esse experimento, fica claro que com a ajuda de alguns softwares de simulação fica muito simples e eficaz comparar desempenho de diversas arquiteturas, podendo ser analisadas métricas como **CPI, tempo e memória**, sendo o critério escolhido de acordo com a finalidade que o usuário necessita.
+
+
+
 
 
  
