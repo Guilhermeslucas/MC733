@@ -63,7 +63,16 @@ Além disso, essa parte do experimento pediu para que usássemos o a ferramenta 
 ```
 mips-newlib-elf-objdump -d hello.mips
 ```  
-está no arquivo **dump.out**, também nesse repositório.
+está no arquivo **dump.out**, também nesse repositório. Após analisar rapidamente o código gerado, é possível notar várias operações muito conhecidas, como por exemplo:  
+
+- **SW:** operação que copia valores entre registradores.
+- **ADDI:** usada para somar o valor de um registrador com algum imediato.
+- **JAL:** indica que o programa deve saltar para algum outro ponto do código.  
+
+Agora, analisando o código da função **ac_behavior( add )**, vemos que é extremamente intuitivo descobrir o que ele faz. No caso, ocorre a soma entre dois **registradores**, indexados dentro do **banco de registradores** e seu resultado sendo direcionado para um **registrador destino**. Além disso, ao final é checado se ocorreu ou não **overflow** por meio da análise do **bit de sinal** dos membros envolvidos na operação.  
+
+### 3.2 Medindo desempenho  
+
 
  
 
