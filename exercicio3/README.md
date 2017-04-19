@@ -3,4 +3,26 @@
 ## RA: 155618
 
 ## 1. Introdução
-Ao longo dos anos, engenheiros procuraram por projetos de hardware cada vez mais rápidos e melhores, para realizar uma enorme gama de atividades de maneira mais eficaz, levando a maiores lucros e resultados significativos para os usuários desses sistemas.
+Desde a invenção da Computação, engenheiros procuram por projetos de hardware cada vez mais rápidos e melhores, para realizar uma enorme gama de atividades de maneira mais eficaz, levando a maiores lucros e resultados significativos para os usuários. Junto com essas melhorias, é necessária a criação de métodos que avaliem as máquinas de maneira transparente e verdadeira, para que o usuário possa escolher qual equipamento melhor se encaixa na sua necessidade. Dito isso, existem várias maneiras de comparar hardwares disponíveis:  
+
+- Tempo gasto do início ao fim de uma atividade  
+- Porcentagem de memória gasta para o processo analisado  
+- Ciclos gastos para execução de uma instrução (CPI)    
+
+O nosso foco nesse experimento é analisar esse último critério apresentado. Para podermos entender o que é **CPI** (ciclos por instrução) devemos ter em mente que um processador realiza suas tarefas por meio de ciclos, que são estágios em que o computador realizar algum tipo de tarefa muito bem definida. Nesse exercício, vamos analisar a arquitetura **MIPS**. Essa tem os seguintes estágios que definem um ciclo:  
+
+    1. Instruction fetch cycle (IF).
+    2. Instruction decode/Register fetch cycle (ID).
+    3. Execution/Effective address cycle (EX).
+    4. Memory access (MEM).
+    5. Write-back cycle (WB).  
+    
+Os nomes desses estágios são, na maioria dos casos, utilizados com seu nome em inglês e por isso decidi mantê-los. Cada estágio tem o seguinte significado:  
+
+    1. Busca da instrução na memória.
+    2. Decodificação da instrução, setando sinais de controle para executá-la corretamente.  
+    3. Ciclo em que as operações aritiméticas são executadas, para algum tipo de operação matemática do programa ou deslocamente de endereço.
+    4. Acesso de memória para buscar dados necessários para executar a instrução.
+    5. Escreve os resultados de volta na memória.  
+    
+
