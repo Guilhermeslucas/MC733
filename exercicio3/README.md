@@ -29,3 +29,23 @@ Assim, fica claro que **CPI** é uma medida de extrema importância quando estam
 Então, notamos que, para avaliarmos máquinas diferentes em simulares, continua sendo importante medidas como **tempo, CPI e quantidade de memória**.  
 
 ## 2. Resumo  
+O objetivo desse exercício foi, principalmente, nos familiarizar com a ferramenta de simulação de arquiteturas **ArchC**, linguagem que se assemelha muito ao **C**, usado para descrever arquiteturas de hardware. Assim, para começar, foi necessário criar os arquivos necessários para simulação e depois compilá-lo, com os seguintes comandos:  
+
+```
+acsim mips.ac -abi
+make
+```  
+Após esse passo, criamos um programa para teste, e compilamos para a arquitetura **MIPS**:  
+
+```
+mips-newlib-elf-gcc -specs=archc hello.c -o hello.mips
+```  
+E a partir desse ponto realizamos a simulação com o seguinte comando:  
+
+```
+./mips.x --load=hello.mips
+```  
+
+Após nos habituarmos com esses passos, conseguimos analisar número de vezes que cada instrução era executada e também calcular o **CPI Médio** de cada benchmark rodando na arquitetura **MIPS**.  
+
+## 3. Experimento  
