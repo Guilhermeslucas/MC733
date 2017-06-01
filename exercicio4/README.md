@@ -116,7 +116,8 @@ Assim, fica claro que nossos resultados são exatamente o que estávamos esperan
 Para realizar um experimento na arquitetura multicore, decidi realizar um programa que soma dois 
 vetores posição a posição e armazena esse resultado em um terceiro vetor. Primeiramente, com o 
 codigo da arquitetura inalterado, rodamos um 
-[teste]() 
+teste com o codigo 
+[vector_sum_single.c](https://github.com/Guilhermeslucas/MC733/blob/master/exercicio4/vector_sum_single.c) 
 com single core, para posterior comparação. 
 Assim, obtivemos os seguintes resultados:
 
