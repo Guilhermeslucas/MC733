@@ -154,7 +154,7 @@ seguindo os cuidados que o professor comentou no exercício:
   mips mips_proc1("mips");
 
 //criando outro processador
-mips mips_proc2("mips");
+mips mips_proc2("mips2");
 ```
 
 ***Associação dos dois processadores ao bus:***
@@ -170,4 +170,11 @@ mips_proc2.init(ac1, av1);
 ```
 
 Essas foram as modificações mais importantes, mas você pode ver todas elas na íntegra no 
-[código]().
+código [main.cpp](https://github.com/Guilhermeslucas/MC733/blob/master/exercicio4/main.cpp).
+
+Assim, testamos a arquitetura multicore com o programa [vector_sum_dual](), obtendo os seguintes 
+resultados:
+
+## 4. Conclusão
+Como podemos ver, nem sempre usar arquiteturas paralelas ajuda no processamento, levando a 
+resultados muito semelhantes, ainda mais quando não são implementadas com o devido cuidado.
