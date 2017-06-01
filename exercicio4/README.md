@@ -172,8 +172,32 @@ mips_proc2.init(ac1, av1);
 Essas foram as modificações mais importantes, mas você pode ver todas elas na íntegra no 
 código [main.cpp](https://github.com/Guilhermeslucas/MC733/blob/master/exercicio4/main.cpp).
 
-Assim, testamos a arquitetura multicore com o programa [vector_sum_dual](), obtendo os seguintes 
+Assim, testamos a arquitetura multicore com o programa [vector_sum_dual](https://github.com/Guilhermeslucas/MC733/blob/master/exercicio4/vector_sum_dual.c), obtendo os seguintes 
 resultados:
+
+```
+       SystemC 2.3.1-Accellera --- Feb 16 2017 14:37:46
+        Copyright (c) 1996-2014 by all Contributors,
+        ALL RIGHTS RESERVED
+sw/hello_world.mips
+ArchC: Reading ELF application file: sw/hello_world.mips
+
+ArchC: -------------------- Starting Simulation --------------------
+
+Resultado: 
+0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 
+68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 
+122 124 126 128 130 132 134 136 138 140 142 144 146 148 150 152 154 156 158 160 162 164 
+166 168 170 172 174 176 178 180 182 184 186 188 190 192 194 196 198 
+ArchC: -------------------- Simulation Finished --------------------
+
+Info: /OSCI/SystemC: Simulation stopped by user.
+ArchC: Simulation statistics
+    Times: 0.17 user, 0.01 system, 0.01 real
+    Number of instructions executed: 243400
+    Simulation speed: 2072.27 K instr/s
+```
+
 
 ## 4. Conclusão
 Como podemos ver, nem sempre usar arquiteturas paralelas ajuda no processamento, levando a 
