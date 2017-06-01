@@ -75,3 +75,8 @@ addr: 4000008, data: 1000000
 Lock Value: 1
 ```
 Como descrito no código, ***1*** era realmente o valor esperado pelo código.
+
+Agora, implementei o periférico que foi pedido no exercício, que escreve o valor que foi passado 
+para ele e quando é solicitada a leitura, muda o valor para 1. Esse codigo ficou bem semelhante ao 
+que usamos no exercício anterior. Ele pode ser visto na íntegra no código
+[](). Porém, as principais mudanças foram essas: 
