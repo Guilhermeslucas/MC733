@@ -46,7 +46,7 @@ volatile int value;
 ```   
 
 
-*** 2 - Mudança no método de escrita: ***   
+***2 - Mudança no método de escrita:***   
 
 ```
 ac_tlm_rsp_status ac_tlm_peripheral::writem( const uint32_t &a , const uint32_t &d )
@@ -57,7 +57,7 @@ ac_tlm_rsp_status ac_tlm_peripheral::writem( const uint32_t &a , const uint32_t 
 }
 ```
 
-*** 3 - Mudança no método de leitura: ***   
+***3 - Mudança no método de leitura:***   
 
 ```
 ac_tlm_rsp_status ac_tlm_peripheral::readm( const uint32_t &a , uint32_t &d )
