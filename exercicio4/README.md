@@ -113,4 +113,6 @@ Value after reading(should be one):1
 Assim, fica claro que nossos resultados são exatamente o que estávamos esperando.
 
 ### 3.2 Aplicação Multicore
-
+Para realizar um experimento na arquitetura multicore, decidi realizar um programa que soma dois 
+vetores posição a posição e armazena esse resultado em um terceiro vetor. Para conseguir fazer essa
+aplicação funcionar, tive que realizar as seguintes modificações nos códigos da arquitetura:
