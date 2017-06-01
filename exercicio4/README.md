@@ -69,7 +69,7 @@ ac_tlm_rsp_status ac_tlm_peripheral::readm( const uint32_t &a , uint32_t &d )
 ```
 
 Feitas essas modificações e rodando o mesmo 
-[código de teste](https://github.com/Guilhermeslucas/MC733/blob/master/exercicio4/firt_test.c))
+[código de teste](https://github.com/Guilhermeslucas/MC733/blob/master/exercicio4/firt_test.c)
 que anteriormente, obtivemos a seguinte resposta:
 ```
 addr: 4000008, data: 1000000
