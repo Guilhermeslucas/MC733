@@ -148,4 +148,26 @@ Para conseguir fazer essa
 aplicação funcionar, tive que realizar as seguintes modificações nos códigos da ```main.cpp```,
 seguindo os cuidados que o professor comentou no exercício:
 
+***Declaração de outro processador:***
+```
+/!  ISA simulator
+  mips mips_proc1("mips");
 
+//criando outro processador
+mips mips_proc2("mips");
+```
+
+***Associação dos dois processadores ao bus:***
+```
+mips_proc1.DM(bus.target_export);
+mips_proc2.DM(bus.target_export);
+```
+
+***Inicialização dos dois processadores:***
+```
+mips_proc1.init(ac, av);
+mips_proc2.init(ac1, av1);
+```
+
+Essas foram as modificações mais importantes, mas você pode ver todas elas na íntegra no 
+[código]().
