@@ -35,16 +35,19 @@ e leia os valores que eu enviei para ele, realizando o teste ainda com mesmo cod
 [first_test.c](https://github.com/Guilhermeslucas/MC733/blob/master/exercicio4/firt_test.c). As
 modificações que eu fiz foram as seguintes:
 
-***1 - Criação de uma variável global para guardar os valores:***
+***1 - Criação de uma variável global para guardar os valores:***   
+
 ```
 #include "peripheral.h"
 
 //////////////////////////////////////////////////////////////////////////////
 
 volatile int value;
-```
+```   
 
-***2 - Mudança no método de escrita:***
+
+*** 2 - Mudança no método de escrita: ***   
+
 ```
 ac_tlm_rsp_status ac_tlm_peripheral::writem( const uint32_t &a , const uint32_t &d )
 {
@@ -54,7 +57,8 @@ ac_tlm_rsp_status ac_tlm_peripheral::writem( const uint32_t &a , const uint32_t 
 }
 ```
 
-*** 3 - Mudança no método de leitura:***
+*** 3 - Mudança no método de leitura: ***   
+
 ```
 ac_tlm_rsp_status ac_tlm_peripheral::readm( const uint32_t &a , uint32_t &d )
 {
